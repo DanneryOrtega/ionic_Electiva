@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>operacion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Número 1:</ion-label>
+    <ion-input [(ngModel)]="num1"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Operación:</ion-label>
+    <ion-input [(ngModel)]="operacionn"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Número 2:</ion-label>
+    <ion-input [(ngModel)]="num2"></ion-input>
+  </ion-item>
+  <ion-button color="success" (click)="operacion()">
+    CALCULAR
+  </ion-button>
+  <ion-list>
+    <ion-item>
+      <ion-label >El Resultado de la suma entre {{ item.num1 }}</ion-label>
+      {{resultado}}
+    </ion-item>
+  </ion-list>
+
+</ion-content>

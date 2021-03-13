@@ -6,7 +6,28 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  nombre = null;
+  apellido = null;
+  celular = null;
+  email = null;
 
-  constructor() {}
+  usuarios = [];
+
+  constructor() { }
+
+  guardarDatos() {
+    // Agregando datos a la base de datos en memoria
+    this.usuarios.push({
+      nombre: this.nombre,
+      apellido: this.apellido
+    })
+    // Limpiando datos
+    this.nombre = "";
+    this.apellido = "";
+  }
+
+  editarDatos() {
+
+  }
 
 }
