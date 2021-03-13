@@ -38,11 +38,18 @@ export class SaludoPage implements OnInit {
 
 
   async presentAlertt() {
+    let mostrar=''
+
+    if (this.nombre == null)
+      mostrar = 'Ingresa tu nombre para saludarte';
+    else
+      mostrar = 'Hola '+ this.nombre;
+
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
       header: 'Saludos',
       //subHeader: 'Subtitle',
-      message:'Hola '+ this.nombre,
+      message: mostrar,//'Hola '+ this.nombre,
       buttons: ['OK']
     });
 

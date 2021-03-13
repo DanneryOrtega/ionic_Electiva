@@ -11,6 +11,7 @@ resultado  = null;
 num1 = null;
 num2 = null;
 operacionn = null;
+mensaje = 'El resultado de la ';
   constructor() { }
 
   ngOnInit() {
@@ -18,14 +19,13 @@ operacionn = null;
 
   operacion() {
     if (this.operacionn == "+" )
-      this.resultado=(parseInt(this.num1)+parseInt(this.num2)).toString();
+      this.resultado=this.mensaje+'suma entre '+(this.num1)+' y '+(this.num2)+' = '+(parseInt(this.num1)+parseInt(this.num2)).toString();
     if (this.operacionn == "-" )
-      this.resultado=(parseInt(this.num1)-parseInt(this.num2)).toString();
+      this.resultado=this.mensaje+'resta entre '+(this.num1)+' y '+(this.num2)+' = '+(parseInt(this.num1)-parseInt(this.num2)).toString();
     if (this.operacionn == "/" )
-      this.resultado=(parseInt(this.num1)/parseInt(this.num2)).toString();
+      this.resultado=this.mensaje+'division entre '+(this.num1)+' y '+(this.num2)+' = '+(parseInt(this.num1)/parseInt(this.num2)).toString();
     else if (this.operacionn == "*" )
-      this.resultado=(parseInt(this.num1)*parseInt(this.num2)).toString();
-
+      this.resultado=this.mensaje+'multiplicacion entre '+(this.num1)+' y '+(this.num2)+' = '+(parseInt(this.num1)*parseInt(this.num2)).toString();
   }
 
 }
