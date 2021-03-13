@@ -36,12 +36,13 @@ export class SaludoPage implements OnInit {
     await alert.present();
   }
 
+
   async presentAlertt() {
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
       header: 'Saludos',
       //subHeader: 'Subtitle',
-      message: 'Hola '+this.nombre,
+      message:'Hola '+ this.nombre,
       buttons: ['OK']
     });
 
@@ -49,11 +50,11 @@ export class SaludoPage implements OnInit {
   }
   
   Mostrar() {
-    if ( this.nombre== null )
-      this.mostrar=this.presentAlert;
-    //else
-      //this.mostrar=this.presentAlertt;
-
+    //if ( this.nombre== null )
+    //this.mostrar=
+    
+  //else
+    //this.mostrar=this.presentAlertt;
   }
 
 }
